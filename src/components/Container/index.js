@@ -1,5 +1,7 @@
 import Container from './Container'
+import HContainer from './HContainer'
 
 export {
-  Container
+  Container,
+  HContainer
 }

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { Text } from 'react-native'
 import styles from './styles'
 
-const CardTitle = ({children, style}) => (
-  <Text style={[styles.cardTitle, style]}> {children} </Text>
+const H2 = ({children}) => (
+  <Text style={styles.H2}>{children}</Text>
 )
 
-CardTitle.propTypes = {
+H2.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default CardTitle
+export default H2

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import styles from './styles'
 
-const Card = ({children, style}) => (
-  <View style={[styles.card, style]}>
+const HContainer = ({children, style}) => (
+  <View style={[styles.hContainer, style]}>
     {children}
   </View>
 )
 
-Card.propTypes = {
+HContainer.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default Card
+export default HContainer

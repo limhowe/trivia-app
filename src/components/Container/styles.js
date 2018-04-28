@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     backgroundColor: '#F5FCFF',
     padding: 20
+  },
+  hContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    backgroundColor: '#F5FCFF'
   }
 })
 

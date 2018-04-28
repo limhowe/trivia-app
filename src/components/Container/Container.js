@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import styles from './styles'
 
-const Container = ({children}) => (
-  <View style={styles.container}>
+const Container = ({children, style}) => (
+  <View style={[styles.container, style]}>
     {children}
   </View>
 )
