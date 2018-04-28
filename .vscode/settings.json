@@ -1,0 +1,5 @@
+{
+    "editor.tabSize": 2,
+    "terminal.integrated.fontFamily": "MesloLGMDZ Nerd Font",
+    "prettier.singleQuote": true
+}

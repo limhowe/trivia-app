@@ -10,7 +10,7 @@ const CardContent = ({children}) => (
 )
 
 CardContent.propTypes = {
-  title: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default CardContent

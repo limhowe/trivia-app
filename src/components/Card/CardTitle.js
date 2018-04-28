@@ -8,7 +8,7 @@ const CardTitle = ({children}) => (
 )
 
 CardTitle.propTypes = {
-  title: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default CardTitle

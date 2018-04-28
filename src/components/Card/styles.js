@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   cardContent: {
     padding: 0,
-    color: 'rgba(0, 0, 0, 0.54)'
+    backgroundColor: 'rgba(0, 0, 0, 0.54)'
   }
 })
 
