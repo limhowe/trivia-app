@@ -1,7 +1,9 @@
 import React from 'react'
+import { Provider } from 'mobx-react'
 import { StackNavigator } from 'react-navigation'
 import HomeScreen from './src/screens/Home'
 import QuizScreen from './src/screens/Quiz'
+import stores from './src/stores'
 
 const RootStack = StackNavigator(
   {
@@ -18,7 +20,9 @@ const RootStack = StackNavigator(
 )
 
 const App = () => (
-  <RootStack />
+  <Provider {...stores}>
+    <RootStack />
+  </Provider>
 )
 
 export default App
