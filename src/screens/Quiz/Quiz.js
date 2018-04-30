@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, HContainer } from '../../components/Container'
 import { observer, inject } from 'mobx-react'
+import entities from 'entities'
 import QuizCard from '../../containers/QuizCard'
 import QuizButton from '../../containers/QuizButton'
 import styles from './styles'
@@ -39,15 +40,19 @@ export default class Quiz extends React.Component {
     return (
       <Container>
         { this.props.quizStore.quizList.length > 0 &&
-          <QuizCard question={this.props.quizStore.currentQuiz.question} category={this.props.quizStore.currentQuiz.category}/>
+          <QuizCard question={entities.decodeHTML(this.props.quizStore.currentQuiz.question)} category={this.props.quizStore.currentQuiz.category}/>
         }
         { this.props.quizStore.quizList.length > 0 &&
           <H3>{this.props.quizStore.currentQuizIndex + 1 }/{this.props.quizStore.quizList.length }</H3>
         }
-        <HContainer style={styles.quizButtons}>
-          <QuizButton title="True" onPress={() => this.onTrue()} />
-          <QuizButton title="False" onPress={() => this.onFalse()} />
-        </HContainer>
+        { this.props.quizStore.quizList.length > 0 ? (
+          <HContainer style={styles.quizButtons}>
+            <QuizButton title="True" onPress={() => this.onTrue()} />
+            <QuizButton title="False" onPress={() => this.onFalse()} />
+          </HContainer>
+        ) : (
+          <H3>Loading...</H3>
+        )}
       </Container>
     )
   }
