@@ -1,11 +1,8 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-  resultsCard: {
-    height: 300
-  },
   resultsList: {
-    maxHeight: 300
+    flex: 1
   },
   separator: {
     borderWidth: 1,
